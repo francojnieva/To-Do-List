@@ -3,3 +3,46 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #0f111f;
+}
+
+main {
+    min-height: calc(100vh - 102px - 89px);
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.input-container input {
+    width: 85%;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+    background-color: rgb(43, 44, 53);
+    color: white;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 2.5rem;
+}
+
+footer p {
+    margin: 0rem;
+}
