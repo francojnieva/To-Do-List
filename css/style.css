@@ -37,6 +37,24 @@ header h1 {
     margin-top: 1.5rem;
 }
 
+/* NOTAS AGREGADAS */
+
+.note-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.note-container ul {
+    padding-left: 0rem;
+}
+
+.note-container li {
+    list-style: none;
+    color: white;
+}
+
+/***********************/
+
 footer {
     text-align: center;
     color: white;
