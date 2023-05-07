@@ -1,6 +1,6 @@
+const note = document.getElementById("note")
 const input = document.getElementById("input")
 const btnAdd = document.getElementById("add")
-const note = document.getElementById("note")
 
 const noteAdd = []
 
@@ -13,17 +13,30 @@ btnAdd.addEventListener("click", () => {
     return
    }
 
-   const ul = document.createElement("ul")
+   const divContainer = document.createElement("div")
+   divContainer.innerHTML = `
+        <li>${inputContent}</li>
+        <button class="btn btn-danger">Borrar</button>
+    `
+    
+    note.appendChild(divContainer)
+    
+    const btnDelete = document.querySelector(".btn-danger")
 
-   ul.innerHTML = `
-    <li>${inputContent}</li>
-    <button class="btn btn-danger" id="btnDelete">Borrar</button>
-   `
-   note.appendChild(ul)
+    btnDelete.addEventListener("click", (e) => {
+        const element = e.target.parentElement
+        note.removeChild(element)
+    })
 
-   noteAdd.push({
-    note: inputContent
-   })
-   
+    noteAdd.push({
+        note: inputContent
+    })
 })
+
+   
+
+
+    
+
+
 
