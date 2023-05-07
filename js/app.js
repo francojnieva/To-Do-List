@@ -2,6 +2,8 @@ const input = document.getElementById("input")
 const btnAdd = document.getElementById("add")
 const note = document.getElementById("note")
 
+const noteAdd = []
+
 btnAdd.addEventListener("click", () => {
    let inputContent = input.value
    inputContent = inputContent.trim()
@@ -15,11 +17,13 @@ btnAdd.addEventListener("click", () => {
 
    ul.innerHTML = `
     <li>${inputContent}</li>
-    <button class="btn btn-danger">Borrar</button>
+    <button class="btn btn-danger" id="btnDelete">Borrar</button>
    `
    note.appendChild(ul)
 
-
-
+   noteAdd.push({
+    note: inputContent
+   })
    
 })
+
