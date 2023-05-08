@@ -1,4 +1,4 @@
-const note = document.getElementById("note")
+const notesContainer = document.getElementById("noteContainer")
 const input = document.getElementById("input")
 const btnAdd = document.getElementById("add")
 
@@ -14,24 +14,33 @@ btnAdd.addEventListener("click", () => {
    }
 
    const divContainer = document.createElement("div")
-   divContainer.innerHTML = `
-        <li>${inputContent}</li>
-        <button class="btn btn-danger">Borrar</button>
-    `
-    
-    note.appendChild(divContainer)
-    
-    const btnDelete = document.querySelector(".btn-danger")
 
-    btnDelete.addEventListener("click", (e) => {
-        const element = e.target.parentElement
-        note.removeChild(element)
-    })
+   const note = document.createElement("li")
+   note.textContent = inputContent
+
+   const btnDelete = document.createElement("button")
+   btnDelete.classList.add("btn")
+   btnDelete.classList.add("btn-danger")
+   btnDelete.textContent = "Borrar"
+   
+   
+   divContainer.appendChild(note)
+   divContainer.appendChild(btnDelete)
+   
+   
+   notesContainer.appendChild(divContainer)
+
+   btnDelete.addEventListener("click", deleteNote)
 
     noteAdd.push({
-        note: inputContent
+        note: note
     })
 })
+
+function deleteNote(e) {
+    const item = e.target.parentElement
+    notesContainer.removeChild(item)
+}
 
    
 
