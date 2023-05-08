@@ -22,10 +22,16 @@ btnAdd.addEventListener("click", () => {
    btnDelete.classList.add("btn")
    btnDelete.classList.add("btn-danger")
    btnDelete.textContent = "Borrar"
+
+   const btnDone = document.createElement("button")
+   btnDone.classList.add("btn")
+   btnDone.classList.add("btn-success")
+   btnDone.textContent = "Hecho"
    
    
    divContainer.appendChild(note)
    divContainer.appendChild(btnDelete)
+   divContainer.appendChild(btnDone)
    
    
    notesContainer.appendChild(divContainer)
