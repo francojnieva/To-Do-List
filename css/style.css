@@ -44,21 +44,30 @@ header h1 {
     margin: 0 auto;
 }
 
-.note-container ul {
-    padding-left: 0rem;
+.note-container div {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
 }
 
-.note-container li {
-    list-style: none;
+.note-container textarea {
+    resize: none;
+    border: none;
+    outline: none;
     color: white;
-    margin: 1.2rem 0rem .5rem 0rem;
+    background: none;
+    margin-bottom: 1rem;
+    pointer-events: none;
 }
 
 .note-container .btn {
-    padding: .3rem .8rem;
+    max-width: 20%;
     font-size: .9rem;
-    margin-right: .8rem;
     margin-bottom: 1rem;
+}
+
+.done {
+    text-decoration: line-through;
 }
 
 /***********************/

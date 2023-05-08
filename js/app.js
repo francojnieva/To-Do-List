@@ -15,7 +15,7 @@ btnAdd.addEventListener("click", () => {
 
    const divContainer = document.createElement("div")
 
-   const note = document.createElement("li")
+   const note = document.createElement("textarea")
    note.textContent = inputContent
 
    const btnDelete = document.createElement("button")
@@ -34,12 +34,18 @@ btnAdd.addEventListener("click", () => {
    divContainer.appendChild(btnDone)
    
    
-   notesContainer.appendChild(divContainer)
+    notesContainer.appendChild(divContainer)
+   
+    input.value = ""
 
-   btnDelete.addEventListener("click", deleteNote)
+    btnDelete.addEventListener("click", deleteNote)
+
+    btnDone.addEventListener("click", () => {
+        note.classList.add("done")
+    })
 
     noteAdd.push({
-        note: note
+        note: inputContent
     })
 })
 
@@ -47,7 +53,6 @@ function deleteNote(e) {
     const item = e.target.parentElement
     notesContainer.removeChild(item)
 }
-
    
 
 
