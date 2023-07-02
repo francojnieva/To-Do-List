@@ -2,8 +2,6 @@ const notesContainer = document.getElementById("noteContainer")
 const input = document.getElementById("input")
 const btnAdd = document.getElementById("add")
 
-const noteAdd = []
-
 btnAdd.addEventListener("click", () => {
    let inputContent = input.value
    inputContent = inputContent.trim()
@@ -42,10 +40,6 @@ btnAdd.addEventListener("click", () => {
 
     btnDone.addEventListener("click", () => {
         note.classList.add("done")
-    })
-
-    noteAdd.push({
-        note: inputContent
     })
 })
 

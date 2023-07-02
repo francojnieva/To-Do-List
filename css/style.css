@@ -17,12 +17,12 @@ header h1 {
     text-align: center;
 }
 
-.input-container {
+.form-container {
     display: flex;
     justify-content: center;
 }
 
-.input-container input {
+.form-container input {
     width: 85%;
     border: none;
     outline: none;
@@ -69,8 +69,6 @@ header h1 {
 .done {
     text-decoration: line-through;
 }
-
-/***********************/
 
 footer {
     text-align: center;
